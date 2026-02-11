@@ -6,6 +6,7 @@ import hero_title from "../../assets/hero_title.png"
 import play_icon from "../../assets/play_icon.png"
 import info_icon from  "../../assets/info-icon.svg"
 import TitleCards from "../../components/TitleCards/TitleCards.jsx";
+import Footer from '../../components/Footer/Footer.jsx'
 const Home = () => {
   return (
     <div className='Home'>
@@ -30,8 +31,8 @@ const Home = () => {
         <TitleCards title="Only on Netflix"/>
         <TitleCards title="Upcoming"/>
         <TitleCards title="top Pics for You"/>
-
       </div>
+      <Footer/>
     </div>
   )
 }
