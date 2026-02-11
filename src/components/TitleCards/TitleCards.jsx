@@ -5,6 +5,7 @@ import cards_data from '../../assets/cards/Cards_data.js'
 
 const TitleCards = ({title,category}) => {
 const cardsRef = useRef()
+const options = {method: 'GET', headers: {accept: 'application/json'}};
 
 const handleWheel = (event)=>{
   event.preventDefault();
@@ -12,6 +13,10 @@ const handleWheel = (event)=>{
 
 }
 useEffect(()=>{
+  fetch('https://api.themoviedb.org/3/authentication', options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
   cardsRef.current.addEventListener('wheel',handleWheel)
 })
 
